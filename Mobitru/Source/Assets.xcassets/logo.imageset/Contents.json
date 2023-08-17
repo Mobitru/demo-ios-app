@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Mobitru-full-mark-transparent.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

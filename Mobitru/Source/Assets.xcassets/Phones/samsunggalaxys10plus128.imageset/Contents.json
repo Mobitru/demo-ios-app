@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "samsunggalaxys10plus128.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
