@@ -7,7 +7,7 @@ You can add new functionality to the app by following the instructions below.
 1. [Set up development environment](#set-up-development-environment)
 1. [ElementIdentifiers](#elemen-identifiers)
 1. [Building the app in the XCODE](#building-the-app-in-the-xcode)
-1. [Building the app from the Terminal or Console](#building-the-app-from-the-terminal-or-console)
+1. [Building the app from the Terminal](#building-the-app-from-the-terminal)
 1. [Running XCUITests on a local machine in the XCODE](#running-xcuitests-on-a-local-machine-in-the-xcode)
 1. [Running XCUITests on a local machine in the CLI](#running-xcuitests-on-a-local-machine-in-the-cli)
 1. [Running XCUITests tests in the Mobitru](#running-xcuitests-in-the-mobitru)
