@@ -125,4 +125,10 @@ final class TextFieldView: UIView {
             })
             .disposed(by: disposeBag)
     }
+    
+    public func setTextFieldValue(newValue: String){
+        self.textField?.text=""
+        self.textField?.insertText(newValue)
+    }
+
 }

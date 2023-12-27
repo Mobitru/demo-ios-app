@@ -18,6 +18,7 @@ final class LoginViewController: UIViewController {
     private weak var loginFieldView: TextFieldView?
     private weak var passwordFieldView: TextFieldView?
     private weak var signInButton: Button?
+    private weak var typeAndSignInButton: Button?
     private weak var biometricAuthButton: Button?
 
     private let viewModel: LoginViewModel
@@ -48,6 +49,7 @@ final class LoginViewController: UIViewController {
         setupLoginFieldView()
         setupPasswordFieldView()
         setupSignInButton()
+        setupTypeAndSignInButton()
         setupBiometricAuthButton()
         prepareConstraints()
     }
@@ -105,6 +107,14 @@ final class LoginViewController: UIViewController {
         contentStackView?.setCustomSpacing(16, after: signInButton)
         self.signInButton = signInButton
     }
+    
+    private func setupTypeAndSignInButton() {
+        let typeAndSignInButton = Button(.typeAndSignInButton)
+
+        contentStackView?.addArrangedSubview(typeAndSignInButton)
+        contentStackView?.setCustomSpacing(32, after: typeAndSignInButton)
+        self.typeAndSignInButton = typeAndSignInButton
+    }
 
     private func setupBiometricAuthButton() {
         let biometricAuthButton = Button(.biometricAuth)
@@ -123,6 +133,10 @@ final class LoginViewController: UIViewController {
         signInButton?.snp.makeConstraints {
             $0.height.equalTo(Constants.buttonsHeight)
         }
+        
+        typeAndSignInButton?.snp.makeConstraints {
+            $0.height.equalTo(Constants.buttonsHeight)
+        }
 
         biometricAuthButton?.snp.makeConstraints {
             $0.height.equalTo(Constants.buttonsHeight)
@@ -133,6 +147,12 @@ final class LoginViewController: UIViewController {
     private func prepareBindings() {
         signInButton?.rx.tap
             .subscribe(onNext: { [weak self] _ in
+                self?.viewModel.performEmailSignIn()
+            })
+            .disposed(by: disposeBag)
+        typeAndSignInButton?.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                self?.performCorrectCredentialEnter()
                 self?.viewModel.performEmailSignIn()
             })
             .disposed(by: disposeBag)
@@ -154,6 +174,12 @@ final class LoginViewController: UIViewController {
             .map { true }
             .bind(to: warningView.rx.isHidden)
             .disposed(by: disposeBag)
+    }
+    
+    func performCorrectCredentialEnter(){
+        let loginRequest = LoginRequest.mock
+        loginFieldView?.setTextFieldValue(newValue: loginRequest!.login)
+        passwordFieldView?.setTextFieldValue(newValue: loginRequest!.password)
     }
 }
 
