@@ -44,6 +44,10 @@ class BaseUiTest: XCTestCase {
         enterCreds(username: validUserName, password: validPassword)
     }
     
+    public func enterVaildCredsWithoutSignIn() {
+        enterCredsWithoutSignIn(username: validUserName, password: validPassword)
+    }
+    
     public func enterUserInfoAndSave(firstName: String, lastName: String, address: String) {
         enterUserInfoAndSave(firstName: firstName, lastName: lastName, address: address, saveButtonTitle: "Save")
     }
@@ -58,6 +62,14 @@ class BaseUiTest: XCTestCase {
     
     public func enterCreds(username: String, password: String) {
         
+        enterCredsWithoutSignIn(username: username, password: password)
+        
+        let signInButton = app.buttons["Sign in"]
+        signInButton.tap()
+    }
+    
+    private func enterCredsWithoutSignIn(username: String, password: String) {
+        
         let loginTextField = app.textFields["Login"]
         loginTextField.tap()
         loginTextField.typeText(username)
@@ -65,9 +77,6 @@ class BaseUiTest: XCTestCase {
         let passwordTextField = app.secureTextFields["Password"]
         passwordTextField.tap()
         passwordTextField.typeText(password)
-        
-        let signInButton = app.buttons["Sign in"]
-        signInButton.tap()
     }
     
     private func typeText(inputId: String, text: String){
