@@ -22,7 +22,7 @@ final class CompleteOrderTests: BaseUiTest {
     func testCompleteOrder() throws{
         app.buttons["Confirm & place order"].tap()
         XCTAssert(app.staticTexts["Order completed"].exists)
-        XCTAssert(app.staticTexts["Order successfully placed. Please check you email."].exists)
+        XCTAssert(app.staticTexts["Order successfully placed. Please check your email."].exists)
         app.buttons["Go back to products"].tap()
         XCTAssert(app.staticTexts["productPrice"].exists)
         XCTAssertEqual(app.buttons["cartButton"].label, "Cart: 0 items in the cart", "cart title is not correct")

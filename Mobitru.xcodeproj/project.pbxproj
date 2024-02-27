@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58492D622B7E6A440009DB1B /* ViewAccessibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58492D612B7E6A440009DB1B /* ViewAccessibilityTests.swift */; };
 		585B69D129E9D7730018994D /* BaseUiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585B69CA29E9D7720018994D /* BaseUiTest.swift */; };
 		588E7E0229E9E5550068ACE9 /* ChangeProductNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588E7E0029E9E5550068ACE9 /* ChangeProductNumberTests.swift */; };
 		588E7E0329E9E5560068ACE9 /* CartProductItemsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588E7E0129E9E5550068ACE9 /* CartProductItemsTest.swift */; };
@@ -19,7 +20,6 @@
 		588E7E1629E9E6160068ACE9 /* ProductsListSortingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588E7E1329E9E6160068ACE9 /* ProductsListSortingTests.swift */; };
 		588E7E1929E9E61E0068ACE9 /* CompleteOrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588E7E1729E9E61E0068ACE9 /* CompleteOrderTests.swift */; };
 		588E7E1A29E9E61E0068ACE9 /* ReviewOrderProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588E7E1829E9E61E0068ACE9 /* ReviewOrderProductsTests.swift */; };
-		58A29D8F2A7AF7C200E799D2 /* ios_gif_not_converted.gif in Resources */ = {isa = PBXBuildFile; fileRef = 58A29D8E2A7AF7C200E799D2 /* ios_gif_not_converted.gif */; };
 		A32ABDD0298C1F88000EA5D8 /* ReviewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32ABDCF298C1F88000EA5D8 /* ReviewOrderViewController.swift */; };
 		A32ABDD2298C1FA7000EA5D8 /* ReviewOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32ABDD1298C1FA7000EA5D8 /* ReviewOrderViewModel.swift */; };
 		A32ABDD6298C20B7000EA5D8 /* ReviewOrderProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32ABDD5298C20B7000EA5D8 /* ReviewOrderProductCell.swift */; };
@@ -149,6 +149,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		58492D612B7E6A440009DB1B /* ViewAccessibilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAccessibilityTests.swift; sourceTree = "<group>"; };
 		585B69CA29E9D7720018994D /* BaseUiTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUiTest.swift; sourceTree = "<group>"; };
 		588E7E0029E9E5550068ACE9 /* ChangeProductNumberTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeProductNumberTests.swift; sourceTree = "<group>"; };
 		588E7E0129E9E5550068ACE9 /* CartProductItemsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartProductItemsTest.swift; sourceTree = "<group>"; };
@@ -300,6 +301,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58492D602B7E69DA0009DB1B /* Accessibility */ = {
+			isa = PBXGroup;
+			children = (
+				58492D612B7E6A440009DB1B /* ViewAccessibilityTests.swift */,
+			);
+			path = Accessibility;
+			sourceTree = "<group>";
+		};
 		588E7E0429E9E5720068ACE9 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -657,6 +666,7 @@
 		A3D8721D297010F30025BEE3 /* MobitruUITests */ = {
 			isa = PBXGroup;
 			children = (
+				58492D602B7E69DA0009DB1B /* Accessibility */,
 				588E7E1029E9E5F40068ACE9 /* ReviewOrder */,
 				588E7E0F29E9E5D80068ACE9 /* ProductsList */,
 				588E7E0C29E9E5B70068ACE9 /* Orders */,
@@ -1233,6 +1243,7 @@
 				585B69D129E9D7730018994D /* BaseUiTest.swift in Sources */,
 				588E7E1929E9E61E0068ACE9 /* CompleteOrderTests.swift in Sources */,
 				588E7E0329E9E5560068ACE9 /* CartProductItemsTest.swift in Sources */,
+				58492D622B7E6A440009DB1B /* ViewAccessibilityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
