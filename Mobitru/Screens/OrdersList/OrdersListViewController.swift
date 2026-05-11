@@ -132,7 +132,7 @@ extension OrdersListViewController: UITableViewDelegate {
 extension OrdersListViewController {
     private func setupTabBarItem() {
         tabBarItem = UITabBarItem(
-            title: "Orders",
+            title: NSLocalizedString("Orders", comment: "orders tab bar title"),
             image: UIImage(named: "receipt"),
             selectedImage: UIImage(named: "receipt_fill")
         )
@@ -140,5 +140,5 @@ extension OrdersListViewController {
 }
 
 private enum Constants {
-    static let title = " Cart (%d) "
+    static let title = NSLocalizedString(" Cart (%d) ", comment: "cart view title pattern")
 }

@@ -132,7 +132,7 @@ final class EditAccountViewController: UIViewController {
 
 private enum Constants {
     enum TitleLabel {
-        static let title = "Please provide your address details to proceed."
+        static let title = NSLocalizedString("Please provide your address details to proceed.", comment: "provide address message")
         static let spacing: CGFloat = 16
     }
 

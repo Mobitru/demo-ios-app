@@ -58,6 +58,6 @@ final class OrdersListViewModel {
 }
 
 private enum Constants {
-    static let inProgressTitle = "In progress (%d)"
-    static let completedTitle = "Completed (%d)"
+    static let inProgressTitle = NSLocalizedString("In progress (%d)", comment: "in progress message pattern")
+    static let completedTitle = NSLocalizedString("Completed (%d)", comment: "completed message pattern")
 }

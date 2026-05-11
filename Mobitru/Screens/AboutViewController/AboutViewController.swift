@@ -67,5 +67,5 @@ final class AboutViewController: UIViewController {
 }
 
 private enum Constants {
-    static let title = "About the app"
+    static let title = NSLocalizedString("About the app", comment: "about the app title")
 }

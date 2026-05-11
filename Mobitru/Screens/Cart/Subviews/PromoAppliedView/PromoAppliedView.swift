@@ -71,7 +71,7 @@ final class PromoAppliedView: UIView {
 
 private enum Constants {
     enum Label {
-        static let applied = " applied"
+        static let applied = NSLocalizedString(" applied", comment: "applied label postfix")
     }
 
     enum Button {

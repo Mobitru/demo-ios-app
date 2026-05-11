@@ -46,8 +46,8 @@ final class ReviewOrderViewModel {
 }
 
 private enum Constants {
-    static let reviewTitle = "Review order"
-    static let orderTitle = "Order #%@"
-    static let contactSectionTitle = "Contact details"
-    static let paymentSectionTitle = "Payment details"
+    static let reviewTitle = NSLocalizedString("Review order", comment: "review order title")
+    static let orderTitle = NSLocalizedString("Order #%@", comment: "order title pattern")
+    static let contactSectionTitle = NSLocalizedString("Contact details", comment: "contact details title")
+    static let paymentSectionTitle = NSLocalizedString("Payment details", comment: "payment details title")
 }

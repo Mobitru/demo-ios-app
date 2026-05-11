@@ -142,7 +142,7 @@ extension ReviewOrderViewController: UITableViewDataSource {
 // MARK: - Constants
 private enum Constants {
     enum Button {
-        static let title = "Confirm & place order"
+        static let title = NSLocalizedString("Confirm & place order", comment: "confirm and place button title")
         static let cornerRadius: CGFloat = 8
         static let leading: CGFloat = 16
         static let trailing: CGFloat = 16

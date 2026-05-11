@@ -110,16 +110,16 @@ private enum Constants {
     }
 
     enum TitleLabel {
-        static let title = "Cart is empty"
+        static let title = NSLocalizedString("Cart is empty", comment: "empty cart view title")
         static let topOffset: CGFloat = 12
     }
 
     enum SubtitleLabel {
-        static let title = "There are no products added yet"
+        static let title = NSLocalizedString("There are no products added yet", comment: "no products view title")
     }
 
     enum Button {
-        static let title = "View products"
+        static let title = NSLocalizedString("View products", comment: "view products button title")
         static let topOffset: CGFloat = 24
         static let height: CGFloat = 48
         static let width: CGFloat = 147

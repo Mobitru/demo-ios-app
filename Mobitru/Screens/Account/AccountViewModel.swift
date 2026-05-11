@@ -16,7 +16,7 @@ private enum Section: Int {
     var title: String? {
         switch self {
         case .details: return nil
-        case .general: return "General"
+        case .general: return NSLocalizedString("General", comment: "general tab title")
         }
     }
 }

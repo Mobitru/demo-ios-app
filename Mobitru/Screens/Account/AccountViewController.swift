@@ -158,7 +158,7 @@ extension AccountViewController: UITableViewDataSource {
 extension AccountViewController {
     private func setupTabBarItem() {
         tabBarItem = UITabBarItem(
-            title: "Account",
+            title: NSLocalizedString("Account", comment: "account bar title"),
             image: UIImage(named: "person"),
             selectedImage: UIImage(named: "person_fill")
         )
@@ -167,7 +167,7 @@ extension AccountViewController {
 }
 
 private enum Constants {
-    static let title = "My account"
+    static let title = NSLocalizedString("My account", comment: "my account message")
 
     enum TableView {
         static let leading: CGFloat = 16
@@ -175,7 +175,7 @@ private enum Constants {
     }
 
     enum Button {
-        static let title = "Logout"
+        static let title = NSLocalizedString("Logout", comment: "logout button title")
         static let cornerRadius: CGFloat = 8
         static let leading: CGFloat = 16
         static let trailing: CGFloat = 16

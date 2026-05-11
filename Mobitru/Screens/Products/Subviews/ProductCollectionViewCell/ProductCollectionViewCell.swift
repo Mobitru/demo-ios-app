@@ -259,11 +259,11 @@ private enum Constants {
         static let topOffset: CGFloat = 12
         static let height: CGFloat = 32
 
-        static let titleAdd = "Add to cart"
+        static let titleAdd = NSLocalizedString("Add to cart", comment: "add to card button title")
         static let accessibilityLabelAdd = "Add to cart"
         static let accessibilityHintAdd = "Activate to add %@ to cart"
 
-        static let titleAdded = "Added to cart"
+        static let titleAdded = NSLocalizedString("Added to cart", comment: "added to card button title")
         static let accessibilityLabelAdded = "Added to cart"
         static let accessibilityHintAdded = "Activate to remove %@ from cart"
     }

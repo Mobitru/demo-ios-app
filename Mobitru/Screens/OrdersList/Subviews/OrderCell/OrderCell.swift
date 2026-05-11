@@ -162,7 +162,7 @@ final class OrderCell: UITableViewCell {
 
 private enum Constants {
     static let countLabelTitle = "x%d"
-    static let stateLabelTitle = "In progress"
+    static let stateLabelTitle = NSLocalizedString("In progress", comment: "in progress label")
     static let stackViewSpacing: CGFloat = 4
     static let stackViewInset: CGFloat = 16
     static let stateViewInset: CGFloat = 4

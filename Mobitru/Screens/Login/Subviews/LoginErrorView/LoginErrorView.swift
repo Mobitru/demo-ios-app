@@ -101,7 +101,7 @@ private enum Constants {
     }
 
     enum Label {
-        static let title = "Incorrect email or password"
+        static let title = NSLocalizedString("Incorrect email or password", comment: "label for incorrect message")
         static let leading: CGFloat = 8
     }
 

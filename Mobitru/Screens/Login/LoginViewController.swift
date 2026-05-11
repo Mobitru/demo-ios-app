@@ -20,6 +20,7 @@ final class LoginViewController: UIViewController {
     private weak var signInButton: Button?
     private weak var typeAndSignInButton: Button?
     private weak var biometricAuthButton: Button?
+    private weak var crashAppButton: Button?
 
     private let viewModel: LoginViewModel
     private let disposeBag = DisposeBag()
@@ -51,6 +52,7 @@ final class LoginViewController: UIViewController {
         setupSignInButton()
         setupTypeAndSignInButton()
         setupBiometricAuthButton()
+        setupCrashAppButton()
         prepareConstraints()
     }
 
@@ -120,7 +122,15 @@ final class LoginViewController: UIViewController {
         let biometricAuthButton = Button(.biometricAuth)
 
         contentStackView?.addArrangedSubview(biometricAuthButton)
+        contentStackView?.setCustomSpacing(100, after: biometricAuthButton)
         self.biometricAuthButton = biometricAuthButton
+    }
+    
+    private func setupCrashAppButton() {
+        let crashAppButton = Button(.crashApp)
+
+        contentStackView?.addArrangedSubview(crashAppButton)
+        self.crashAppButton = crashAppButton
     }
 
     // MARK: Prepare Constraints
@@ -139,6 +149,10 @@ final class LoginViewController: UIViewController {
         }
 
         biometricAuthButton?.snp.makeConstraints {
+            $0.height.equalTo(Constants.buttonsHeight)
+        }
+        
+        crashAppButton?.snp.makeConstraints {
             $0.height.equalTo(Constants.buttonsHeight)
         }
     }
@@ -160,6 +174,12 @@ final class LoginViewController: UIViewController {
         biometricAuthButton?.rx.tap
             .subscribe(onNext: { [weak self] _ in
                 self?.viewModel.performBiometricSignIn(reason: Constants.biometricAuthReason)
+            })
+            .disposed(by: disposeBag)
+        
+        crashAppButton?.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                self?.viewModel.performAppCrash()
             })
             .disposed(by: disposeBag)
 
@@ -184,8 +204,9 @@ final class LoginViewController: UIViewController {
 }
 
 private enum Constants {
-    static let infoLabelTitle = "Use your unique login & password or simply use biometric authentication."
-    static let biometricAuthReason = "Authentificate to login!"
+    static let infoLabelTitle = NSLocalizedString("Use your unique login & password or simply use biometric authentication.",
+                                                  comment: "login screen title")
+    static let biometricAuthReason = NSLocalizedString("Authentificate to login!", comment: "title of popup with biometric auth")
     static let buttonsHeight: CGFloat = 48
 
     enum ContentStackView {

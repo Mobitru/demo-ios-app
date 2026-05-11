@@ -24,5 +24,5 @@ final class OrderCellModel {
 }
 
 private enum Constants {
-    static let title = "Order #%d"
+    static let title = NSLocalizedString("Order #%d", comment: "order title message pattern")
 }

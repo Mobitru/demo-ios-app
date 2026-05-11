@@ -182,13 +182,13 @@ final class ProductsViewController: UIViewController {
 
 private enum Constants {
     enum TabBar {
-        static let title = "Home"
+        static let title = NSLocalizedString("Home", comment: "home bar title")
         static let imageName = "home"
         static let selectedImageName = "home_fill"
     }
 
     enum CartButton {
-        static let title = " Cart (%d) "
+        static let title = NSLocalizedString(" Cart (%d) ", comment: "card title pattern")
         static let accessibilityLabel = "Cart: %d items in the cart"
         static let accessibilityHint = "Dubble tap to open the cart"
     }

@@ -118,7 +118,7 @@ final class OrderPlacedViewController: UIViewController {
 }
 
 private enum Constants {
-    static let title = "Order completed"
+    static let title = NSLocalizedString("Order completed", comment: "order completed title")
 
     enum ContentView {
         static let horizontalInset: CGFloat = 16
@@ -130,12 +130,12 @@ private enum Constants {
     }
 
     enum TitleLabel {
-        static let title = "Order successfully placed. Please check your email."
+        static let title = NSLocalizedString("Order successfully placed. Please check your email.", comment: "complete order title")
         static let top: CGFloat = 16
     }
 
     enum ActionButton {
-        static let title = "Go back to products"
+        static let title = NSLocalizedString("Go back to products", comment: "back to products button title")
         static let horizontalInset: CGFloat = 16
         static let bottom: CGFloat = 16
         static let height: CGFloat = 48
