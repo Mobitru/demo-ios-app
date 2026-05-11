@@ -160,10 +160,10 @@ private enum Constants {
     static let dividerViewHeight: CGFloat = 1
 
     enum Titles {
-        static let packagingFee = "Packaging fee"
-        static let subtotal = "Subtotal"
-        static let deliveryFee = "Delivery fee"
-        static let discount = "Discount"
-        static let total = "Total"
+        static let packagingFee = NSLocalizedString("Packaging fee", comment: "packaging fee title")
+        static let subtotal = NSLocalizedString("Subtotal", comment: "subtotal title")
+        static let deliveryFee = NSLocalizedString("Delivery fee", comment: "delivery fee title")
+        static let discount = NSLocalizedString("Discount", comment: "discount title")
+        static let total = NSLocalizedString("Total", comment: "total title")
     }
 }

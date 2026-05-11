@@ -19,16 +19,16 @@ enum SortingType: Equatable {
 
     var description: String {
         switch self {
-        case .price: return "Price"
-        case .name: return "Name"
+        case .price: return NSLocalizedString("Price", comment: "price description")
+        case .name: return NSLocalizedString("Name", comment: "name description")
         }
     }
 
     var label: String {
         switch self {
         case .price: return accessibilityLabel
-        case .name(direction: .ascending): return "Product name A–Z"
-        case .name(direction: .descending): return "Product name Z–A"
+        case .name(direction: .ascending): return NSLocalizedString("Product name A-Z", comment: "name sorting asc")
+        case .name(direction: .descending): return NSLocalizedString("Product name Z-A", comment: "name sorting asc")
         }
     }
 
@@ -50,8 +50,8 @@ enum SortingDirection {
 
     var description: String {
         switch self {
-        case .ascending: return "ascending"
-        case .descending: return "descending"
+        case .ascending: return NSLocalizedString("ascending", comment: "asc title")
+        case .descending: return NSLocalizedString("descending", comment: "desc title")
         }
     }
 

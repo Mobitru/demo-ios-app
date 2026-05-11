@@ -116,10 +116,10 @@ final class ProductsSortingViewController: UIViewController {
 }
 
 private enum Constants {
-    static let title = "Sort by"
+    static let title = NSLocalizedString("Sort by", comment: "sort by view title")
 
     enum Button {
-        static let title = "Apply"
+        static let title = NSLocalizedString("Apply", comment: "apply button title")
         static let accessibilityHint = "Activate to apply %@ sorting opttion"
         static let height: CGFloat = 48
         static let horizontalInset: CGFloat = 16

@@ -16,15 +16,15 @@ final class EditAccountViewModel {
         
         var title: String {
             switch self {
-            case .editAccount: return "Edit account"
-            case .provideAddress: return "Provide address"
+            case .editAccount: return NSLocalizedString("Edit account", comment: "edit account view title")
+            case .provideAddress: return NSLocalizedString("Provide address", comment: "provide address view title")
             }
         }
         
         var actionButtonTitle: String {
             switch self {
-            case .editAccount: return "Save"
-            case .provideAddress: return "Review order"
+            case .editAccount: return NSLocalizedString("Save", comment: "save button title")
+            case .provideAddress: return NSLocalizedString("Review order", comment: "review order button title")
             }
         }
     }
@@ -77,22 +77,22 @@ final class EditAccountViewModel {
         self.state = state
         
         self.firstNameViewModel = .init(textFieldType: .general(
-            title: "First name",
+            title: NSLocalizedString("First name", comment: "first name field title"),
             errorText: Constants.errorMessage,
             initialValue: profileManager.firstName)
         )
         self.lastNameViewModel = .init(textFieldType: .general(
-            title: "Last name",
+            title: NSLocalizedString("Last name", comment: "last name field title"),
             errorText: Constants.errorMessage,
             initialValue: profileManager.lastName)
         )
         self.emailViewModel = .init(textFieldType: .general(
-            title: "Email",
+            title: NSLocalizedString("Email", comment: "email field title"),
             errorText: Constants.errorMessage,
             initialValue: profileManager.email)
         )
         self.addressViewModel = .init(textFieldType: .general(
-            title: "Address",
+            title: NSLocalizedString("Address", comment: "address field title"),
             errorText: Constants.errorMessage,
             initialValue: profileManager.address)
         )
@@ -141,5 +141,5 @@ final class EditAccountViewModel {
 }
 
 private enum Constants {
-    static let errorMessage = "Field can’t be empty"
+    static let errorMessage = NSLocalizedString("Field can’t be empty", comment: "empty field error")
 }

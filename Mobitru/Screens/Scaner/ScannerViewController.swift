@@ -147,8 +147,8 @@ extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
 extension ScannerViewController {
     private func presentErrorAlert() {
         let alert = UIAlertController(
-            title: "An Error has occurred",
-            message: "Can't parse promo code",
+            title: NSLocalizedString("An Error has occurred", comment: "error scanner view title"),
+            message: NSLocalizedString("Can't parse promo code", comment: "cannot parse promo error message"),
             preferredStyle: .alert
         )
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel))

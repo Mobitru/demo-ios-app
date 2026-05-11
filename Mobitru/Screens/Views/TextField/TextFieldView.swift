@@ -99,10 +99,10 @@ final class TextFieldView: UIView {
 
         switch viewModel.textFieldType {
         case .login:
-            titleLabel?.text = "Login"
+            titleLabel?.text = NSLocalizedString("Login", comment: "login field title")
             textField.accessibilityIdentifier = "Login"
         case .passwword:
-            titleLabel?.text = "Password"
+            titleLabel?.text = NSLocalizedString("Password", comment: "password field title")
             textField.accessibilityIdentifier = "Password"
             textField.isSecureTextEntry = true
         case .general(let title, let errorText, let initialText):

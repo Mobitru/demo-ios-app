@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		58492D622B7E6A440009DB1B /* ViewAccessibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58492D612B7E6A440009DB1B /* ViewAccessibilityTests.swift */; };
 		585B69D129E9D7730018994D /* BaseUiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585B69CA29E9D7720018994D /* BaseUiTest.swift */; };
+		586B75FE2FAE1BC1004BF2D1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 586B75FD2FAE1BC1004BF2D1 /* Localizable.xcstrings */; };
 		588E7E0229E9E5550068ACE9 /* ChangeProductNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588E7E0029E9E5550068ACE9 /* ChangeProductNumberTests.swift */; };
 		588E7E0329E9E5560068ACE9 /* CartProductItemsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588E7E0129E9E5550068ACE9 /* CartProductItemsTest.swift */; };
 		588E7E0729E9E5A70068ACE9 /* LoginUiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588E7E0629E9E5A70068ACE9 /* LoginUiTests.swift */; };
@@ -151,6 +152,7 @@
 /* Begin PBXFileReference section */
 		58492D612B7E6A440009DB1B /* ViewAccessibilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAccessibilityTests.swift; sourceTree = "<group>"; };
 		585B69CA29E9D7720018994D /* BaseUiTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUiTest.swift; sourceTree = "<group>"; };
+		586B75FD2FAE1BC1004BF2D1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		588E7E0029E9E5550068ACE9 /* ChangeProductNumberTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeProductNumberTests.swift; sourceTree = "<group>"; };
 		588E7E0129E9E5550068ACE9 /* CartProductItemsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartProductItemsTest.swift; sourceTree = "<group>"; };
 		588E7E0629E9E5A70068ACE9 /* LoginUiTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUiTests.swift; sourceTree = "<group>"; };
@@ -741,6 +743,7 @@
 		A3D8724D2976C80C0025BEE3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				586B75FD2FAE1BC1004BF2D1 /* Localizable.xcstrings */,
 				A3D871FD297010F20025BEE3 /* AppDelegate.swift */,
 				A3D87208297010F30025BEE3 /* LaunchScreen.storyboard */,
 				A3D87206297010F30025BEE3 /* Assets.xcassets */,
@@ -1073,6 +1076,8 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				zh,
 			);
 			mainGroup = A3D871F1297010F20025BEE3;
 			packageReferences = (
@@ -1099,6 +1104,7 @@
 				A3D872972982A8CB0025BEE3 /* LoginResponseBiometric.json in Resources */,
 				A3D872532976CA320025BEE3 /* ReadexPro-SemiBold.ttf in Resources */,
 				A3D8720A297010F30025BEE3 /* LaunchScreen.storyboard in Resources */,
+				586B75FE2FAE1BC1004BF2D1 /* Localizable.xcstrings in Resources */,
 				A32ABDF2298D23B1000EA5D8 /* ReadexPro-Medium.ttf in Resources */,
 				A3D872952982A8A10025BEE3 /* LoginResponse.json in Resources */,
 				A3D872992982A8EF0025BEE3 /* LoginRequest.json in Resources */,
@@ -1319,12 +1325,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -1373,11 +1380,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1453,13 +1461,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = epam.MobitruUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.epam.mobitru.demoapp.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -1478,7 +1486,7 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = epam.MobitruUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.epam.mobitru.demoapp.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;

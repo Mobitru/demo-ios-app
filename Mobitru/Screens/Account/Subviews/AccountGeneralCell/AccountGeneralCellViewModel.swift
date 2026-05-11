@@ -9,6 +9,6 @@ import Foundation
 import RxSwift
 
 final class AccountGeneralCellViewModel {
-    let title = "About the app"
+    let title = NSLocalizedString("About the app", comment: "about app view title")
     let didTap = PublishSubject<Void>()
 }

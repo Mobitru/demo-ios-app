@@ -238,10 +238,10 @@ final class CartViewController: UIViewController {
 }
 
 private enum Constants {
-    static let title = "My cart"
+    static let title = NSLocalizedString("My cart", comment: "my card view title")
 
     enum PromoButton {
-        static let title = "Apply promo code"
+        static let title = NSLocalizedString("Apply promo code", comment: "apply promo button title")
         static let borderWidth: CGFloat = 1
         static let cornerRadius: CGFloat = 8
         static let verticalInset: CGFloat = 12
@@ -253,7 +253,7 @@ private enum Constants {
     }
 
     enum ConfirmButton {
-        static let title = "Continue to checkout"
+        static let title = NSLocalizedString("Continue to checkout", comment: "continue to checkout button title")
         static let cornerRadius: CGFloat = 8
         static let bottomInset: CGFloat = 12
         static let horizontalInset: CGFloat = 16

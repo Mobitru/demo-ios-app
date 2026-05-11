@@ -234,6 +234,6 @@ private enum Constants {
 
     enum QuantityLabel {
         static let leading: CGFloat = 16
-        static let title = "Qty: %d"
+        static let title = NSLocalizedString("Qty: %d", comment: "quantity label pattern")
     }
 }

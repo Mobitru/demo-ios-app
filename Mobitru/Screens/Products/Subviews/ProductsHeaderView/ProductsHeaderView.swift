@@ -78,7 +78,7 @@ final class ProductsHeaderView: UIView {
 private enum Constants {
     enum Label {
         static let leading: CGFloat = 16
-        static let title = "Mobile phones (%d)"
+        static let title = NSLocalizedString("Mobile phones (%d)", comment: "mobile phones title pattern")
     }
 
     enum SortingView {

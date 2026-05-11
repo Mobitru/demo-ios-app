@@ -55,4 +55,8 @@ final class LoginViewModel {
             })
             .disposed(by: disposeBag)
     }
+    
+    func performAppCrash(){
+        fatalError("the app test crash")
+    }
 }
