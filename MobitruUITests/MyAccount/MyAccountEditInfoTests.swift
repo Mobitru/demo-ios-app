@@ -13,7 +13,7 @@ final class MyAccountEditInfoTests: BaseUiTest {
     override func setUpWithError() throws {
         try super.setUpWithError()
         enterVaildCreds()
-        let myAccountNavButton = app.tabBars["bottomTabBar"].buttons["My account"]
+        let myAccountNavButton = app.tabBars["bottomTabBar"].buttons["Account"]
         myAccountNavButton.tap()
         app.buttons["edit"].tap()
     }
