@@ -35,14 +35,14 @@ final class ProductsListSortingTests: BaseUiTest {
     }
     
     func testSortNameAscending() throws{
-        app.staticTexts["Product name A–Z"].tap()
+        app.staticTexts["Product name A-Z"].tap()
         app.buttons["Apply"].tap()
         XCTAssertEqual(app.staticTexts["productTitle"].firstMatch.label , "Asus ROG",
                        "first item in sorted list is not correct")
     }
     
     func testSortNameDescending() throws{
-        app.staticTexts["Product name Z–A"].tap()
+        app.staticTexts["Product name Z-A"].tap()
         app.buttons["Apply"].tap()
         XCTAssertEqual(app.staticTexts["productTitle"].firstMatch.label , "Xiaomi Redmi Note 11",
                        "first item in sorted list is not correct")

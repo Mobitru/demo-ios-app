@@ -59,7 +59,7 @@ final class ViewAccessibilityTests: BaseUiTest {
     
     func testMyAccountView() throws{
         enterVaildCreds()
-        app.tabBars["bottomTabBar"].buttons["My account"].tap()
+        app.tabBars["bottomTabBar"].buttons["Account"].tap()
         var baseOrderViewChecks = XCUIAccessibilityAuditType.all
         baseOrderViewChecks.remove(.dynamicType)
         try app.performAccessibilityAudit(for: baseOrderViewChecks)
